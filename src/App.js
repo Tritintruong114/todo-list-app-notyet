@@ -12,7 +12,7 @@ function App() {
     setTasks(
       tasks.map((task) => {
         if (task.id === taskId) {
-          return { ...task, status };
+          return { ...task, status: status ? 1 : 0 };
         }
         return task;
       })
@@ -32,7 +32,7 @@ function App() {
     }
   };
 
-  const removeTask = (task) => {
+  const removeTask = (taskId) => {
     setTasks(tasks.filter((task) => task.id !== taskId));
   };
   const handleInputChange = (e) => {
@@ -63,7 +63,7 @@ function App() {
                     onChange={(e) => setTaskStatus(task.id, e.target.checked)}
                   ></input>
                   <button
-                    onClick={(e) => removeTask(task.id)}
+                    onClick={() => removeTask(task.id)}
                     className="btn-action btn-action-delete"
                   >
                     X
