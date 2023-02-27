@@ -1,12 +1,19 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react";
+import Calendar from "react-calendar";
 
 function App() {
   const [tasks, setTasks] = useState([
     { id: "task_1", title: "Learn JS", status: 1 },
     { id: "task_2", title: "Code a Todo List", status: 1 },
   ]);
+
+  const [date, setDate] = useState(new Date());
+
+  const onChange = (date) => {
+    setDate(date);
+  };
 
   const setTaskStatus = (taskId, status) => {
     setTasks(
@@ -92,6 +99,10 @@ function App() {
           ></input>
           <button type="submit">Add</button>
         </form>
+      </div>
+
+      <div className="calender-react">
+        <Calendar onChange={onChange} value={date} />
       </div>
     </div>
   );
