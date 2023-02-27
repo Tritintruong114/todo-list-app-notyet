@@ -4,11 +4,41 @@ import React, { useState } from "react";
 
 function App() {
   const [tasks, setTasks] = useState([
-    { id: "task_1", title: "Learn JS", status: 0 },
-    { id: "task_2", title: "Code a Todo List", status: 0 },
+    { id: "task_1", title: "Learn JS", status: 1 },
+    { id: "task_2", title: "Code a Todo List", status: 1 },
   ]);
 
-  const [showInComplete, setShowInComplete] = useState(true);
+  const setTaskStatus = (taskId, status) => {
+    setTasks(
+      tasks.map((task) => {
+        if (task.id === taskId) {
+          return { ...task, status };
+        }
+        return task;
+      })
+    );
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (newTask) {
+      const task = {
+        id: Date.now(),
+        title: newTask,
+        status: 0,
+      };
+      setTasks([...tasks, task]);
+      setNewTask("");
+    }
+  };
+
+  const removeTask = (task) => {
+    setTasks(tasks.filter((task) => task.id !== taskId));
+  };
+  const handleInputChange = (e) => {
+    setNewTask(e.target.value);
+  };
+  const [showInComplete, setShowInComplete] = useState(false);
   const [newTask, setNewTask] = useState("");
   return (
     <div className="App">
@@ -29,40 +59,37 @@ function App() {
                   <input
                     type="checkbox"
                     className="btn-action btn-action-done"
+                    checked={Boolean(task.status)}
+                    onChange={(e) => setTaskStatus(task.id, e.target.checked)}
                   ></input>
-                  <button className="btn-action btn-action-delete">X</button>
+                  <button
+                    onClick={(e) => removeTask(task.id)}
+                    className="btn-action btn-action-delete"
+                  >
+                    X
+                  </button>
                 </div>
               </li>
             ))}
-          <li>
-            <span className="label">Do a calendar libary</span>
-            <div className="actions">
-              <input
-                type="checkbox"
-                className="btn-action btn-action-done"
-              ></input>
-              <button className="btn-action btn-action-delete">X</button>
-            </div>
-          </li>
-          <li>
-            <span className="label">Learn ReactJS</span>
-            <div className="actions">
-              <input
-                type="checkbox"
-                className="tn-baction btn-action-done"
-              ></input>
-              <button className="btn-action btn-action-delete">X</button>
-            </div>
-          </li>
         </ul>
         <div className="filter-wrapper">
           <label htmlFor="filter">Show incompleted tasks only</label>
-          <input type="checkbox" id="filter" checked={showInComplete}></input>
+          <input
+            type="checkbox"
+            id="filter"
+            checked={showInComplete}
+            onChange={(e) => setShowInComplete(e.target.checked)}
+          ></input>
         </div>
 
-        <form action="#" className="form">
+        <form onSubmit={handleSubmit} className="form">
           <label htmlFor="newitem">Add to the todo list</label>
-          <input type="text" id="newitem" value={newTask}></input>
+          <input
+            type="text"
+            id="newitem"
+            value={newTask}
+            onChange={handleInputChange}
+          ></input>
           <button type="submit">Add</button>
         </form>
       </div>
