@@ -8,8 +8,37 @@
 
 
 .timerContainer{
-  /* display: flex; */
+  display: flex;
   position: absolute;
-  /* right:; */
-  left: 10%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 0px;
+  bottom: 36%;
+  width: 30%;
+  height: 15%;
+  background-color: red;
+}
+
+.buttonContainer{
+  display: flex;
+  width: 50%;
+  height: 30%;
+  justify-content:center;
+  align-items:center ;
+  gap: 5px;
+  background-color: yellow;
+}
+
+.button {
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  padding: 2%;
+}
+
+.numberTimer{
+  color: white;
+  font-size: medium;
 }
