@@ -3,57 +3,34 @@ import React, { useState, useEffect } from "react";
 var timer;
 
 const Timer = () => {
-  const [second, setSecond] = useState(0);
-  const [minutes, setMinutes] = useState(0);
+  const [time, setTime] = useState(0);
+  const [timerOn, setTimerOn] = useState(false);
 
   useEffect(() => {
-    //
-    timer = setInterval(() => {
-      setSecond(second + 1);
-      if (second === 59) {
-        setMinutes(minutes + 1);
-        setSecond(0);
-      }
-    }, 1000);
-    return () => {
-      clearInterval(timer);
-    };
-  });
+    let interval = null;
 
-  const restart = () => {
-    setSecond(0);
-    setMinutes(0);
-  };
+    if (timerOn) {
+      interval = setInterval(() => {
+        setTime((prevTime) => prevTime + 10);
+      }, 10);
+    } else {
+      clearInterval(interval);
+    }
 
-  const stop = () => {
-    clearInterval(timer);
-  };
-
-  // const start = () => {};
+    return () => clearInterval(interval);
+  }, [timerOn]);
+  //useEffect to run a timerOn value changing.
 
   return (
-    // <div className="timer">
-    <div className="timer_main">
-      <div className="timer_container">
-        <h1 className="timer_title">Timer</h1>
-        <h2 className="timer_counter">
-          {minutes < 10 ? "0" + minutes : minutes}:
-          {second < 10 ? "0" + second : second}
-        </h2>
-        <div className="buttonContainer">
-          <button className="restart" onClick={restart}>
-            Restart
-          </button>
-          <button className="stop" onClick={stop}>
-            Stop
-          </button>
-          {/* <button className="stop" onClick={start}>
-            Start
-          </button> */}
-        </div>
+    <div className="timerContainer">
+      <div>{time}</div>
+      <div>
+        <button onClick={() => setTimerOn(true)}>Start</button>
+        <button onClick={() => setTimerOn(false)}>Stop</button>
+        <button onClick={() => setTimerOn(true)}>Resume</button>
+        <button onClick={() => setTime(0)}>Reset</button>
       </div>
     </div>
-    // </div>
   );
 };
 

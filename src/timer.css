@@ -5,54 +5,11 @@
   --background-color: #876445;
   --background-task-color: rgba(255, 255, 255, 0.3);
 }
-.timer_container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 24%;
+
+
+.timerContainer{
+  /* display: flex; */
   position: absolute;
-  right: 3%;
-  background-color: var(--background-color);
-  color: var(--white-color);
-  flex-direction: column;
-  height: 20%;
-  border-radius: 6%;
-  top: 51%; 
-  /* right: 100%; */
-}
-
-
-
-.buttonContainer{
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 6px;
-  width: 50%;
-}
-.buttonContainer button:hover{
-    background-color: var(--background-color);
-  }
-.buttonContainer button {
-  /* border: 1; */
-  /* border-color: red; */
-  /* color: var(--black-color, 1); */
-  opacity: 100%;
-  font-weight: bold;
-  padding: 3px;
-  border-radius: 6px;
-  cursor: pointer;
-  /* background-color:  */
-}
-
-.timer_title{
-  display: flex;
-  position: absolute;
-  bottom: 39%;
-}
-
-.timer_counter{
-  display: flex;
-  position: absolute;
-  bottom: 12%;
+  /* right:; */
+  left: 10%;
 }
