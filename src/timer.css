@@ -1,0 +1,15 @@
+.timer_container{
+  display: flex;
+  position: absolute;
+  align-self: center;
+  
+  /* width; */
+  background: red;
+  width: 20%;
+  /* height: ; */
+}
+
+.container{
+  display: flex;
+  width: 100%;
+}

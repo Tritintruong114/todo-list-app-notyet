@@ -2,6 +2,8 @@
 import "./App.css";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import Timer from "./Timer.js";
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -103,6 +105,10 @@ function App() {
 
       <div className="calender-react">
         <Calendar onChange={onChange} value={date} />
+      </div>
+
+      <div className="timer-react">
+        <Timer />
       </div>
     </div>
   );
