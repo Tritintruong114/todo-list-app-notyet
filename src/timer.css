@@ -30,7 +30,7 @@
   bottom: 6px;
   width: 50%;
 }
-  .buttonContainer button:hover{
+.buttonContainer button:hover{
     background-color: var(--background-color);
   }
 .buttonContainer button {

@@ -29,7 +29,7 @@ const Timer = () => {
     clearInterval(timer);
   };
 
-  const start = () => {};
+  // const start = () => {};
 
   return (
     // <div className="timer">
@@ -47,9 +47,9 @@ const Timer = () => {
           <button className="stop" onClick={stop}>
             Stop
           </button>
-          <button className="stop" onClick={start}>
+          {/* <button className="stop" onClick={start}>
             Start
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
