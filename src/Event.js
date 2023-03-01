@@ -7,6 +7,9 @@ const Event = () => {
     { id: "Event-1", title: "Meeting Mentor", date: "08/02/2023", status: 0 },
   ]);
 
+  const removeEvent = (eventID) => {
+    setEvents(events.filter((event) => event.id !== eventID));
+  };
   return (
     <div className="eventContainer">
       <h2 className="eventTilte">Incoming Event</h2>
@@ -14,7 +17,10 @@ const Event = () => {
         {events.map((event) => (
           <li className="singleList">
             {event.title}
-            <label>{event.date}</label>
+            <label className="eventDate">{event.date}</label>
+            <button onClick={() => removeEvent(event.id)} className="eventBtn">
+              x
+            </button>
           </li>
         ))}
       </ul>
