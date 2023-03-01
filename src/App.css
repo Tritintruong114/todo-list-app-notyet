@@ -1,6 +1,8 @@
 .app{
   text-align: center;
   /* background-color: black;   */
+  font-family: var(--font-family);
+
 }
 
 :root {
@@ -8,6 +10,7 @@
   --white-color: #f6f6f6;
   --background-color: #876445;
   --background-task-color: rgba(255, 255, 255, 0.3);
+  --font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 *::after,
 *::before {
@@ -30,7 +33,7 @@
   right: 30%;
   color: var(--white-color);
   background-color: var(--background-color);
-  font-family:'Shantell Sans', cursive;
+  font-family: var(--font-family);
 }
 
 .title {

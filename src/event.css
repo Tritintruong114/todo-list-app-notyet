@@ -1,6 +1,12 @@
+:root{
+  --font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
 .eventContainer{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /* text-decoration: none; */
   /* background: red; */
   position: absolute;
@@ -17,4 +23,82 @@
 
 .eventUnderList{
   list-style: none;
+  position: absolute;
+  /* right: px; */
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  top: 9%;
+  padding: 3px;
+  width: 90%;
+  height: 20%;
+  /* margin: ; */
+}
+
+.eventTilte{  
+  font-family: var(--font-family);  
+  color: black;
+  border-radius: 6px;
+  font-size: 20px;
+  background-color: #fff;
+  border: 1px solid black;
+  position: absolute;
+  top: 0%;
+  width: 60%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6%;
+}
+/* .eventTilte h2{
+  padding: 0px;  
+} */
+
+.singleList{
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  background-color: #fff;
+}
+
+.eventInfomationContainer{
+  font-family: var(--font-family);
+  background-color: aqua;
+  position: absolute;
+  bottom: 0px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: ; */
+
+}
+
+.addEventContainer{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.inputEvent{
+  margin: 2px;
+  border-radius: 6px;
+  border: 0px solid black;
+}
+
+.eventAddBtn{
+  width: 30%;
+}
+
+.newEvent{
+  font-size: 15px;
+  font-family: var(--font-family);
 }
