@@ -1,5 +1,6 @@
 // import logo from "./logo.svg";
 // import background from "./background.jpeg";
+import Event from "./Event";
 import "./App.css";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
@@ -112,6 +113,10 @@ function App() {
 
         <div className="timer-react">
           <Timer />
+        </div>
+
+        <div className="eventComponent">
+          <Event />
         </div>
       </div>
     </div>

@@ -1,0 +1,20 @@
+.eventContainer{
+  display: flex;
+  flex-direction: column;
+  /* text-decoration: none; */
+  /* background: red; */
+  position: absolute;
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-image: radial-gradient( ellipse farthest-corner at 27px 27px , #818181, #818181 50%, #e5e5f7 50%);
+  background-size: 27px 27px;
+  width: 25%;
+  /* list-style: none; */
+  height: 45%;
+  left: 3%;
+  border-radius: 9px;
+}
+
+.eventUnderList{
+  list-style: none;
+}
