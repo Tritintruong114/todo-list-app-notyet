@@ -1,6 +1,6 @@
 // import logo from "./logo.svg";
 // import background from "./background.jpeg";
-import Event from "./Event";
+import Event from "../components/Event";
 import "./App.css";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
@@ -73,6 +73,7 @@ function App() {
                       type="checkbox"
                       className="btn-action btn-action-done"
                       checked={Boolean(task.status)}
+                      //boolean changing number to boolen
                       onChange={(e) => setTaskStatus(task.id, e.target.checked)}
                     ></input>
                     <button
@@ -118,6 +119,7 @@ function App() {
         <div className="eventComponent">
           <Event />
         </div>
+
       </div>
     </div>
   );

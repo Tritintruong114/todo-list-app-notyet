@@ -1,6 +1,6 @@
 // import React, { useState } from "react";
 import React, { useState, useEffect } from "react";
-import musicplayer from "./musicplayer.css";
+import styles from "./styles.css";
 
 const Music = () => {
   return (

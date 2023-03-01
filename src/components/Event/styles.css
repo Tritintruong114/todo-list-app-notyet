@@ -1,6 +1,9 @@
 :root{
   --font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+  --black-color: rgba(0, 0, 0, 0.4);
+  --white-color: #f6f6f6;
+  --background-color: #876445;
+  --background-task-color: rgba(255, 255, 255, 0.3);
 }
 .eventContainer{
   display: flex;
@@ -25,7 +28,8 @@
   list-style: none;
   position: absolute;
   /* right: px; */
-  background-color: red;
+  /* background-color: red; */
+  /* border: 1px solid var(--b); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,6 +63,7 @@
 
 .singleList{
   font-family: var(--font-family);
+  border: 1px solid var(--background-color  );
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,7 +97,7 @@
 .inputEvent{
   margin: 2px;
   border-radius: 6px;
-  border: 0px solid black;
+  border: 0px solid var(--background-color);
 }
 
 .eventAddBtn{
