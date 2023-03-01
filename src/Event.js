@@ -2,18 +2,21 @@ import React, { useState, useEffect } from "react";
 import event from "./event.css";
 
 const Event = () => {
+  const [events, setEvents] = useState([
+    { id: "Event-2", title: "Meeting Doctor", date: "03/02/2023", status: 1 },
+    { id: "Event-1", title: "Meeting Mentor", date: "08/02/2023", status: 0 },
+  ]);
+
   return (
     <div className="eventContainer">
       <h2 className="eventTilte">Incoming Event</h2>
       <ul className="eventUnderList">
-        <li className="singleList">
-          Event
-          <label>23/3/20</label>
-        </li>
-        <li className="singleList">
-          Event
-          <label>23/3/20</label>
-        </li>
+        {events.map((event) => (
+          <li className="singleList">
+            {event.title}
+            <label>{event.date}</label>
+          </li>
+        ))}
       </ul>
 
       <form className="eventInfomationContainer">
@@ -23,7 +26,9 @@ const Event = () => {
         <div className="addEventContainer">
           <input className="event inputEvent"></input>
           <input className="date inputEvent"></input>
-          <button className="eventAddBtn">Add</button>
+          <button className="eventAddBtn" type="submit">
+            Add
+          </button>
         </div>
       </form>
     </div>
