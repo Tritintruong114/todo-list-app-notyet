@@ -1,4 +1,5 @@
 // import logo from "./logo.svg";
+import background from "./background.jpeg"
 import "./App.css";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
@@ -51,6 +52,7 @@ function App() {
   const [newTask, setNewTask] = useState("");
   return (
     <div className="App">
+    <image src=""
       {/* <h1>This is ToDo List App - By Bruno Truong</h1> */}
       <div className="container-dailytask">
         <h1 className="title">
