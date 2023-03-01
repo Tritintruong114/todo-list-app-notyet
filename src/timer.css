@@ -14,17 +14,24 @@
   align-items: center;
   justify-content: center;
   border-radius: 6%;
-  right: 6%;
+  right: 2.7%;
   bottom: 36%;
-  width: 18%;
+  border: 1px solid var(--background-color) ;
+  /* border-color: #03C988; */
+  width: 24%;
   height: 15%;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color);
+   */
+   background-color: #e5e5f7;
+   opacity: 1;
+   background: linear-gradient(135deg, #81818155 25%, transparent 25%) -27px 0/ 54px 54px, linear-gradient(225deg, #818181 25%, transparent 25%) -27px 0/ 54px 54px, linear-gradient(315deg, #81818155 25%, transparent 25%) 0px 0/ 54px 54px, linear-gradient(45deg, #818181 25%, #e5e5f7 25%) 0px 0/ 54px 54px;
 }
 
 .buttonContainer{
   /* font-size: small; */
   display: flex;
   width: 50%;
+  opacity: 1;
   height: 30%;
   justify-content:center;
   align-items:center ;
@@ -33,15 +40,65 @@
 }
 
 .button {
+  color: black  ;
   border-radius: 6px;
+  opacity:1 ;
   border: none;
   cursor: pointer;
   width: 50%;
   padding: 2%;
   font-size: 15px;
+  background-color: white;
 }
 
 .numberTimer{
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
   font-size: medium;
+  opacity: 1;
+  border-color: black;
+  background-color: #FAF8F1;
+  border-radius: 9px;
+  border: 1px solid var(--background-color) ;
+
+  width: 50%;
+  height: 30%;
+  font-size: 27px;
 }
+
+
+.startBtn{
+  background-color: #FFE15D;
+  opacity: 0.8;
+
+}
+
+.stopBtn{
+  background-color: #DC3535;
+  opacity: 0.8;
+
+}
+
+.resumeBtn{
+  opacity: 0.8;
+  background-color: #03C988;
+  
+}
+
+.resetBtn{
+  background-color: #FDFF00;
+  opacity: 0.8;
+}
+
+.startBtn:hover,
+.stopBtn:hover,
+.resetBtn:hover,
+.resumeBtn:hover{
+  opacity: 1;
+}
+
+/* .startBtn:hover{
+  opacity: 1;
+} */
