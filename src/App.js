@@ -9,8 +9,12 @@ import Timer from "./components/Timer";
 
 function App() {
   const [tasks, setTasks] = useState([
-    { id: "task_1", title: "Learn JS", status: 1 },
-    { id: "task_2", title: "Code a Todo List", status: 1 },
+    { id: "task_1", title: "Check the Todo list working?", status: 0 },
+    { id: "task_2", title: "Check the Timer", status: 0 },
+    { id: "task_3", title: "Check the Event list", status: 0 },
+    { id: "task_4", title: "Try to look a day in a month", status: 0 },
+    { id: "task_5", title: "Grade this assigment", status: 0 },
+    // { id: "task_3", title: "Code a Todo List", status: 1 },
   ]);
 
   const [date, setDate] = useState(new Date());
@@ -59,7 +63,7 @@ function App() {
         <div className="container-dailytask">
           <h1 className="title">
             Daily Task
-            <span>Get things done, one item at a time.</span>
+            <span className="quote">Get things done, one item at a time.</span>
           </h1>
           {/* <span>Get things done, one item at a time.</span> */}
           <ul className="task-list">

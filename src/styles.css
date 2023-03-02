@@ -3,8 +3,13 @@
   /* background-color: black;   */
   font-family: var(--font-family);
 
+
 }
 
+.quote{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* font-size: 30px; */
+} 
 :root {
   --black-color: rgba(0, 0, 0, 0.4);
   --white-color: #f6f6f6;
@@ -20,8 +25,8 @@
   /* padding-top: 3%; */
 
 .container-dailytask {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px 10px, rgba(0, 0, 0, 0.2) 0px -3px 20px inset;
   width: 40%;
   /* height: 100%; */
   /* max-height: 100%; */
@@ -30,10 +35,13 @@
   position: absolute;
   /* top: 9%; */  
   /* padding-top: 6; */
-  right: 30%;
+  right: 29%;
   color: var(--white-color);
   background-color: var(--background-color);
   font-family: var(--font-family);
+  border-radius: 9px;
+  border: 3px solid var(--black-color);
+  /* margin: ; */
 }
 
 .title {
