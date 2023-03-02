@@ -1,11 +1,11 @@
 // import logo from "./logo.svg";
 // import background from "./background.jpeg";
-import Event from "../components/Event";
-import "./App.css";
+import Event from "./components/Event";
+import "./styles.css";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import Timer from "./Timer.js";
+import Timer from "./components/Timer";
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -119,7 +119,6 @@ function App() {
         <div className="eventComponent">
           <Event />
         </div>
-
       </div>
     </div>
   );

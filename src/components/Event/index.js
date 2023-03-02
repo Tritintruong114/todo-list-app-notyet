@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./styles.css";
+import "./styles.css";
 
 const Event = () => {
   const [events, setEvents] = useState([
