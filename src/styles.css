@@ -41,6 +41,7 @@
   font-family: var(--font-family);
   border-radius: 9px;
   border: 3px solid var(--black-color);
+  height: 92%;
   /* margin: ; */
 }
 
